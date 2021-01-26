@@ -3,8 +3,8 @@ import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import App from './App';
 
-// import {fetchMissions as mockFetchMissions} from './api/fetchMissions';
-// jest.mock('./api/fetchMissions');
+import {fetchShow as mockFetchShow} from './api/fetchShow';
+jest.mock('./api/fetchShow');
 
 test('app renders without errors', ()=> {
     render(<App/>);
@@ -20,24 +20,26 @@ test('menu selection A', async ()=> {
 
 });
 
+test('renders shows data', async ()=> {
+    mockFetchShow.mockResolvedValueOnce({
+        data:[
+            {id:"ASDF", 
+            name:"null",
+            status: "null",
+            },  
+            
+        ]
+    });
 
-// test('Renders mission data when button is clicked', async ()=> {
-//     mockFetchMissions.mockResolvedValueOnce({
-//         data:[
-//             {mission_name:"Mission 1", mission_id:"mission 1"},
-//             {mission_name:"Mission 2", mission_id:"mission 2"}
-//         ]
-//     });
+    //Arrange: render app
+    render(<App />);
 
-//     //Arrange: render app
-//     render(<App />);
-
-//     //Act: get data from api? and push button
-//     const button = screen.getByRole('button');
-//     userEvent.click(button);
+    //Act: get data 
+    const dropdownMenu = await screen.findByText(/select a season/i);
+    userEvent.click(dropdownMenu);
     
-//     await waitFor(()=>{
-//         //Assert: We should get the same amount of missions as our api returned.
-//         expect(screen.getAllByTestId('mission')).toHaveLength(2);
-//     });
-// });
+    // await waitFor(()=>{
+    //     //Assert:
+    //     expect(screen.getAllByTestId('episode')).toHaveLength(2);
+    // });
+});

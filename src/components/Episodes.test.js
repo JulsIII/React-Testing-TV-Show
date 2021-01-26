@@ -4,17 +4,6 @@ import Episodes from "./Episodes";
 
 
 
-// const missions = [
-//     {
-//         mission_name: "Thaicom",
-//         mission_id: "9D1B7E0"
-//     },
-//     {
-//         mission_name: "Telstar",
-//         mission_id: "F4F83DE"
-//     }
-// ];
-
 // test('info id found', ()=>{
 // const title    
 // expect(title)
