@@ -28,7 +28,7 @@ Get the project fired up and start using it as a user would. Try to go through t
 
 Follow these steps for completing your project.
 
-- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's Repository). **Please don't merge your own pull request**
+- [*] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's Repository). **Please don't merge your own pull request**
 
 ### Instructions and/or completion requirements
 

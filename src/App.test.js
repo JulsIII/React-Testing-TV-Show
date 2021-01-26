@@ -40,6 +40,5 @@ test('renders shows data', async ()=> {
     
     // await waitFor(()=>{
     //     //Assert:
-    //     expect(screen.getAllByTestId('episode')).toHaveLength(2);
-    // });
-});
+        expect(screen.getAllByTestId('episode')).toHaveLength(2);
+    });
