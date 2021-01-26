@@ -15,9 +15,11 @@ import Episodes from "./Episodes";
 //     }
 // ];
 
-test('episodes renders without errors', ()=>{
-    render(<Episodes />);
-});
+// test('info id found', ()=>{
+// const title    
+// expect(title)
+
+// });
 
 // test('renders change in missions list correctly', ()=>{
 //     const { rerender } = render(<MissionsList missions={[]}/>);

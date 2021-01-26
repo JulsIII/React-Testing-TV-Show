@@ -10,6 +10,15 @@ test('app renders without errors', ()=> {
     render(<App/>);
 });
 
+test('menu selection A', async ()=> {
+
+    render(<App/>);
+
+    const dropdownMenu = await screen.findByText(/select a season/i);
+    
+    userEvent.click(dropdownMenu);
+
+});
 
 
 // test('Renders mission data when button is clicked', async ()=> {

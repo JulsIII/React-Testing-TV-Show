@@ -17,7 +17,7 @@ export default function App() {
   useEffect(() => {
     const getData = async () => {
       const res = await fetchShow();
-      setShow(res.data);
+      setShow(res.data); 
       setSeasons(formatSeasons(res.data._embedded.episodes));
     };
     getData();
