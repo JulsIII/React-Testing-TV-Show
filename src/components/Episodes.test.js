@@ -4,21 +4,10 @@ import Episodes from "./Episodes";
 
 
 
-// test('info id found', ()=>{
-// const title    
-// expect(title)
+test('1st render, no epds displayed', ()=>{
+   render(<Episodes episodes={[]} />);
 
-// });
+   const episode = screen.getByText(/episodes/i);
+   expect(episode).not.toBeInTheDocument();
 
-// test('renders change in missions list correctly', ()=>{
-//     const { rerender } = render(<MissionsList missions={[]}/>);
-
-//     let missionObjects = screen.queryAllByTestId('mission');
-//     expect(missionObjects).toStrictEqual([]);
-//     expect(missionObjects).toHaveLength(0);
-
-//     rerender(<MissionsList missions={missions}/>);
-    
-//     missionObjects = screen.queryAllByTestId('mission');
-//     expect(missionObjects).toHaveLength(2);
-// });
+});
