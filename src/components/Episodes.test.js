@@ -14,3 +14,11 @@ test('1st render, no epds displayed', ()=>{
    expect(episodes).toHaveLength(0);
 
 });
+
+test('Components rerenders with episodes when props change', ()=>{
+    const { rerender } render(<Episodes episodes={[]} />);
+
+    rerender(<Episodes episodes={[]} />);
+ 
+
+});
